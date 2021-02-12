@@ -1,0 +1,72 @@
+body{
+    background:#56d9f0;
+}
+
+
+
+.ptero{
+    position: absolute;
+    width: 100px;
+    height: 73px;
+    bottom: 150px;
+    background-image: url(ptero.png);
+}
+
+.game-over {
+    text-align: center;
+    color: #666666;
+    margin-top: 50px;
+    font-family: arial;
+}
+
+@keyframes slideright{
+    from{
+        background-position: 2550px;
+    }
+    to{
+        background-position: 0;
+    }
+}
+
+@-webkit-keyframes run{
+    0%,100% {background-image: url(andando1.png);}
+    25%{background-image: url(andando22.png);}
+    50%{background-image: url(andando1.png);}
+    75%{background-image: url(andando22.png);}
+}
+
+@-webkit-keyframes run2{
+    0%,100% {background-image: url(cactus1.png);}
+    25%{background-image: url(cactus2.png);}
+    50%{background-image: url(cactus1.png);}
+    75%{background-image: url(cactus2.png);}
+}
+
+.dino {
+    width: 60px;
+    height: 145px;
+    background-image: url(andando1.png);
+    -webkit-animation: run 0.5s infinite;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.cactus{
+    position: absolute;
+    width: 60px;
+    height: 145px;
+    bottom: 0;
+    background-image: url(cactus1.png);
+    -webkit-animation: run2 0.5s infinite;
+}
+
+.background {
+    position: absolute;
+    bottom: 0;
+    background-image: url(background3.png);
+    background-repeat: repeat-x;
+    animation: slideright 5s infinite linear;
+    width: 2550px;
+    height: 830px;
+}
