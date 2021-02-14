@@ -3,7 +3,7 @@ const background = document.querySelector('.background');
 let isJumping = false;
 let position=0;
 
-function handleKeyUp(event){
+function handleKeyDown(event){
     if(event.keyCode === 32 || event.keyCode === 38){
         if (!isJumping){
             jump();
@@ -25,14 +25,14 @@ function jump(){
                
 
             } else{
-                position-=20;
+                position-=30;
                 dino.style.bottom= position +'px'
             }
             },20)
         }
         else{
             //Sobe
-        position+= 20;
+        position+= 30;
         dino.style.bottom = position+'px';
         
         }
@@ -100,4 +100,4 @@ function createCactus(){
 }
 
 createCactus();
-document.addEventListener('keyup', handleKeyUp);
+document.addEventListener('keydown', handleKeyDown);
